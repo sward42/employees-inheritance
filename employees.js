@@ -14,6 +14,7 @@ Employee.prototype.setLastName = function(Name){
 
 
 var Clinician = function(){
+	this.title = "Clinician"
 	this.field = null;
 };
 Clinician.prototype = new Employee();
@@ -23,6 +24,7 @@ Clinician.prototype.setField = function(newField){
 
 
 var Operations = function(){
+	this.title = "Operations"
 	this.area = null;
 };
 Operations.prototype = new Employee();
@@ -70,7 +72,7 @@ Employee01.department = Employee01Dept;
 
 console.log("Employee01", Employee01); 
 console.log(Employee01.firstName + " " + Employee01.lastName + " works in " + Employee01.department.name + " as a " +
-Employee01 + " in " + Employee01.field + ".");
+Employee01.title + " in " + Employee01.field + ".");
 
 
 var Employee02 = new Operations();
@@ -83,8 +85,8 @@ var Employee02Dept = new Headquarters();
 Employee02.department = Employee02Dept;
 
 console.log("Employee02", Employee02);
-console.log(Employee02.firstName + " " + Employee02.lastName + " works in " + Employee02.department.name + " as a " +
-Employee02 + " in " + Employee02.area + ".");
+console.log(Employee02.firstName + " " + Employee02.lastName + " works in " + Employee02.department.name + " in " +
+Employee02.title + " in " + Employee02.area + ".");
 
 
 
@@ -100,7 +102,7 @@ Employee03.department = Employee03Dept;
 
 console.log("Employee03", Employee03);
 console.log(Employee03.firstName + " " + Employee03.lastName + " works in our " + Employee03.department.name + " in "+ Employee03.department.city + " as a " +
-Employee03 + " in " + Employee03.field + ".");
+Employee03.title + " in " + Employee03.field + ".");
 
 
 var Employee04 = new Operations();
@@ -114,8 +116,8 @@ Employee04Dept.setCity("San Francisco");
 Employee04.department = Employee04Dept;
 
 console.log("Employee04", Employee04);
-console.log(Employee04.firstName + " " + Employee04.lastName + " works in our " + Employee04.department.name + " in "+ Employee04.department.city + " as a " +
-Employee04 + " in " + Employee04.area + ".");
+console.log(Employee04.firstName + " " + Employee04.lastName + " works in our " + Employee04.department.name + " in "+ Employee04.department.city + " in " +
+Employee04.title + " in " + Employee04.area + ".");
 
 
 
